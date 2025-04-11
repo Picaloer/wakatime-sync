@@ -1,5 +1,12 @@
 name: Update gist with WakaTime summary
 on:
+  workflow_dispatch:
+     inputs:
+       withpypy:
+         description: 'True to print to STDOUT'
+         required: false
+         default: false
+         type: boolean
   schedule:
     - cron: '40 1 * * *'
 jobs:
